@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+.sideBtn {
+	position: relative;
+	padding: 1em 1.5em;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+	font-size: 18px;
+	font-weight:600;
+	margin: 0 0.8em 1.5em 0.8em;
+}
+
+.sideBtn.type1 {
+	color: #566473;
+}
+
+.sideBtn.type1.type1::after, .sideBtn.type1.type1::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	border: 2px solid;
+	transition: all 0.8s ease;
+	border-radius: 2px;
+}
+
+.sideBtn.type1.type1::after {
+	bottom: 0;
+	right: 0;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-bottom-color: #566473;
+	border-right-color: #566473;
+}
+
+.sideBtn.type1.type1::before {
+	top: 0;
+	left: 0;
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+
+}
+
+.sec1 .sideBtn.type1.type1::before{
+	border-top-color: red;
+	border-left-color: red;
+}
+
+.sec2 .sideBtn.type1.type1::before{
+	border-top-color: blue;
+	border-left-color: blue;
+}
+
+.sec3 .sideBtn.type1.type1::before{
+	border-top-color: orange;
+	border-left-color: orange;
+}
+
+.sideBtn.type1.type1:hover:after, .sideBtn.type1.type1:hover:before {
+	width: 100%;
+	height: 100%;
+}
+
+.curBtn{
+	position: relative;
+	padding: 1em 1.5em;
+	border: 2px solid;
+	border-radius:2px;
+	background-color:	#FFD700;
+	cursor: pointer;
+	outline: none;
+	font-size: 18px;
+	font-weight:600;
+	margin: 0 0.8em 1.5em 0.8em;
+	border-bottom-color: #566473;
+	border-right-color: #566473;
+	color: #A20055;
+}
+
+.sec1 .curBtn{
+	border-top-color: red;
+	border-left-color: red;
+}
+.sec2 .curBtn{
+	border-top-color: blue;
+	border-left-color: blue;
+}
+.sec3 .curBtn{
+	border-top-color: orange;
+	border-left-color: orange;
+}

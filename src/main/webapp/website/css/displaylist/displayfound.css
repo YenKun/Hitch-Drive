@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+
+* {
+	font-family: 'Patua One', cursive;
+	margin: auto;
+}
+
+#all {
+	width: 1000px;
+}
+
+#schedule {
+	padding-left: 200px;
+	
+}
+
+.listheader {
+	text-align: center;
+	height: 60px;
+}
+
+a, a:active, a:hover, a:visited  {
+	color: #333333;
+}
+
+table {
+	margin-top: 20px;
+}
+
+thead {
+}
+
+.sort {
+	align: center;
+}
+
+tr {
+	font-size: 20px;
+	background-color: rgba(200, 200, 200, 0.7);
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.tddriver {
+	padding: 10px 40px 10px 40px;
+	width: 200px;
+	border-right: 2px solid white;
+	border-bottom: 2px solid white;
+}
+
+.tddriver:hover {
+	cursor: pointer;
+}
+
+.mphotoicon {
+	height: 80px;
+	width: 80px;
+}
+
+.nophoto {
+	height: 80px;
+	width: 80px;
+	text-align: center;
+}
+
+.driverinfo {
+	text-align: center;
+	padding: 10px;
+	
+}
+.tdcancel {
+	text-align: center;
+	border-left: 3px solid white;
+	text-shadow: -1px 0 #DDDDDD, 0 1px #DDDDDD, 1px 0 #DDDDDD, 0 -1px #DDDDDD;
+	color: #C9392C;
+}
+
+.tdride {
+	width: 600px;
+	padding: 20px 20px 20px 30px;
+	border-bottom: 2px solid white;
+	height: 100px;
+}
+
+.tdride .left {
+	float: left;
+	width: 320px;
+}
+
+.tdride .right {
+	float: right;
+	width: 190px;
+}

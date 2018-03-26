@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="/iHitch/website/js/jquery-3.3.1.min.js">	
+</script>
+<script src="RateFormTest.js"></script>
+
+</head>
+<body>
+	<!-- 用於測試RateMember功能 -->
+	<!-- Need to Import JSTL taglib -->
+	<!-- 前端功能封裝在RateForm.js-->
+
+	<script type="text/javascript">
+		// 		Ride歷史紀錄Page與Rate的submit功能所需資料
+		var ride = {
+			"driverId" : 6,
+			"rideId" : 7
+		}
+		var passDetail = {
+			"name" : "Jack",
+			"passMId" : 2
+		}
+		function SettingUI() {
+			var settings = [ "driverId", "rideId", "passMId" ]
+			var body = $("body");
+			
+			for (i = 0, max = settings.length; i < max; i++) {
+				var div = $("<div></div>").text(settings[i]);
+				var input = $("<input></input>").attr("id", settings[i]).attr(
+						"type", "text").on("change", function() {
+					if (this.id == "driverId" || this.id == "rideId") {
+						ride[this.id] = this.value;
+					}else{
+						passDetail[this.id] = this.value;
+					}
+				})
+				body.append(div, input,"<br>");
+			}
+		}
+
+		// 		Rate測試按鈕
+		$(document).ready(function() {
+			SettingUI();
+			var driver = $("<span></span>");
+			driver.text(passDetail.name);
+			$("body").append(driver);
+			initRateBtn(driver);
+			$("td").on("click",function(){
+				console.log(this);
+				console.log($(this));
+			})
+		});
+	</script>
+
+	<!-- !!!要用Browser import .js檔 的話，無法使用EL和JSTL...囧-->
+	<table>
+		<tr>
+			<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td>
+		</tr>
+	</table>
+</body>
+</html>

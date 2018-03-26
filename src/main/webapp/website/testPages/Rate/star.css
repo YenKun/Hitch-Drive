@@ -1,0 +1,7 @@
+﻿/* Used to change the color of stars */
+.star {
+	width: 30px;
+	-webkit-filter: grayscale(1); /*沒有任何色彩的黑白影像*/
+/* 	-webkit-filter: grayscale(0); 顏色不變 */
+}
+	

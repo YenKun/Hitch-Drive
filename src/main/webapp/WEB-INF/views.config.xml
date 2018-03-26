@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+<!-- sign up -->
+	<bean id="signUp.success" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/website/pages/register/name.jsp"></property>
+	</bean>	 
+	<bean id="signUp.error" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/website/pages/register/emailPwd.jsp"></property>
+	</bean>
+	<bean id="addName.success" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/index.jsp"></property>
+	</bean>
+	<bean id="login.success" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/index.jsp"></property>
+	</bean>
+	<bean id="login.fail" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/website/pages/login.jsp"></property>
+	</bean>	
+	<bean id="adminLogin.success" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/finalAdmin/adminPage.jsp"></property>
+	</bean>
+	<bean id="adminLogin.fail" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/finalAdmin/pages/login.jsp"></property>
+	</bean>
+	<bean id="member.select" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/manager/adminPage.jsp"></property>
+	</bean>	
+<!-- /sign up -->
+
+<!-- ride -->
+	<bean id="findRides" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/findRide/findRide.jsp"></property>
+	</bean>
+	
+	<bean id="offerDetails" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/offerRide/offerDetails.jsp"></property>
+	</bean>
+	
+	<bean id="offerSchedule" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/offerRide/offerSchedule.jsp"></property>
+	</bean>
+	
+	<bean id="displayOffers" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/offerRide/displayOffers.jsp"></property>
+	</bean>
+	
+	<bean id="displayHistory" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/Profile/RidesHistory.jsp"></property>
+	</bean>
+	
+	<bean id="displayRides" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/findRide/displayRides.jsp"></property>
+	</bean>
+	
+	<bean id="displayBookings" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/findRide/displayBookings.jsp"></property>
+	</bean>
+	
+	<bean id="rideInfo" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/findRide/rideInfo.jsp"></property>
+	</bean>
+	
+	<bean id="offerInfo" class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/website/pages/offerRide/offerInfo.jsp"></property>
+	</bean>
+	
+	<bean id="insert.success" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/website/pages/offerRide/offerSuccess.jsp"></property>
+	</bean>
+	
+	<bean id="cancel.success" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/website/pages/offerRide/cancelSuccess.jsp"></property>
+	</bean>
+	
+	<bean id="cancel.booking" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/website/pages/findRide/cancelBooking.jsp"></property>
+	</bean>
+<!-- /ride -->
+	<bean id="backtoindex" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+		<property name="url" value="/website/pages/TransToIndex.jsp"></property>
+	</bean>
+
+</beans>
